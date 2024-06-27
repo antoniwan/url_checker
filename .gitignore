@@ -5,6 +5,7 @@
 *.so
 *.dylib
 *.test
+url_checker_mac
 
 # Output of the 'go coverage' tool, specifically when used with LiteIDE
 *.out
