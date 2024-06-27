@@ -1,0 +1,4 @@
+URL,status,url_validity,url_validity,status_code
+https://www.google.com,valid_url,valid_url,valid_url,200
+https://go.dev/doc/tutorial/getting-started#install,valid_url,valid_url,valid_url,200
+http://dewalt.com,valid_url,valid_url,valid_url,200
