@@ -33,3 +33,7 @@ This Go program scans the script's folder for `.csv` files, lets you select one 
 ## Example
 
 I've included 2 sample CSV files to the project
+
+## Executables
+
+For compiling into executables, chmod the appropriate permissions for `build.sh` and run it! The executables should appear in `/binaries`. I've added basic instructions for Windows and Mac OS executables.
