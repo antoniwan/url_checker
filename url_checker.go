@@ -96,6 +96,8 @@ func main() {
 	// Add the new "url_validity" and "status_code" columns to the header
 	header = append(header, "url_validity", "status_code")
 
+	fmt.Println("Pinging URL list now! 🏃🏽‍♂️")
+
 	// Create a slice to hold the data rows
 	var rows [][]string
 
@@ -111,8 +113,8 @@ func main() {
 		}
 
 		// Check if the first column is a valid URL
-		urlValidity := "read"
-		statusCode := "0"
+		urlValidity := "invalid"
+		statusCode := "invalid"
 		if isValidURL(record[0]) {
 			urlValidity = "valid_url"
 			statusCode = fmt.Sprintf("%d", getStatusCode(record[0]))
@@ -123,12 +125,11 @@ func main() {
 		rows = append(rows, record)
 	}
 
-	// Display the header and rows
-	fmt.Println("Header:", header)
-	fmt.Println("Rows:")
-	for i, row := range rows {
-		fmt.Printf("Row %d: %v\n", i+1, row)
+	var rowCount int
+	for range rows {
+		rowCount++
 	}
+	fmt.Println("Updated rows:", rowCount)
 
 	// Write the updated data back to the CSV file
 	outputFile, err := os.Create(filePath)
